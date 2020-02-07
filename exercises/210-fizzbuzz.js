@@ -9,3 +9,35 @@
 // Examples:
 // fizzbuzz(3) --> '..fizz'
 // fizzbuzz(15) --> '..fizz.buzzfizz..fizzbuzz.fizz..fizzbuzz'
+
+function fizzbuzz (input) {
+let fizzString = []
+for (i=1; i<=input; i++) {
+    
+if (i%3==0 && i%5==0) {
+
+    //console.log(fizzString += 'fizzBuzz')
+    fizzString += 'fizzbuzz'
+}
+
+else if (i%3!=0 && i%5!=0){
+    
+    //console.log(fizzString += '.')
+    fizzString += '.'
+}
+else if (i%5!=0) {
+    
+    //console.log(fizzString += 'fizz')
+    fizzString += 'fizz'
+    
+} 
+else if (i%3!==0) {
+    fizzString += 'buzz'
+    //console.log(fizzString += 'buzz')
+}
+
+}
+return fizzString
+}
+
+console.log(fizzbuzz(3))
