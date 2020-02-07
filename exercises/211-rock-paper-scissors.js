@@ -17,7 +17,7 @@
 
 // player1 = 'scissors'  
 // let ranNum = Math.random()
-// let player2 = (function () {
+// let player1 = (function () {
 //     if (ranNum <=0.33 ) {
 //         return 'rock'
 //     } 
@@ -29,23 +29,23 @@
 //     }    
 // })()
 // console.log(ranNum)
-// console.log("player 2 = " + player2)
+// console.log("player 2 = " + player1)
 
-function rockPaperScissors (player2, player1) { 
-if (player2 === player1)  {
+function rockPaperScissors (player1, player2) { 
+if (player1 === player2)  {
     return 'draw'
     }
-else if (player2 ==='rock' && player1==='scissors') { //|| player1!=='paper') {
-    return 'player2'
+else if (player1 ==='rock' && player2==='scissors') { //|| player1!=='paper') {
+    return 'player 1'
     }
-else if (player2 ==='paper' && player1==='rock'){// || player1!=='scissors') {
-    return 'player2'
+else if (player1 ==='paper' && player2==='rock'){// || player1!=='scissors') {
+    return 'player 1'
     }
-else if (player2 ==='scissors' && player1==='paper') {// || player1!=='rock') {
-    return 'player2'
+else if (player1 ==='scissors' && player2==='paper') {// || player1!=='rock') {
+    return 'player 1'
     }
 else {
-    return 'player1'
+    return 'player 2'
     }
 }
 
