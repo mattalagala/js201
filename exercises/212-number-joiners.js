@@ -5,12 +5,44 @@
 // numberJoinerWhile(1, 10) --> '1_2_3_4_5_6_7_8_9_10'
 // numberJoinerWhile(12, 14) --> '12_13_14'
 
+function numberJoinerWhile (numStart, numEnd) {
+var i = numStart
+var joinedNumbers = ['']
+while (i<=numEnd) {
+    joinedNumbers += i + '_'
+    i++
+    
+    //console.log(i)
+    //console.log(joinedNum)
+}
+
+console.log(joinedNumbers)
+joinedNumbers.pop()
+return joinedNumbers
+}
+
+numberJoinerWhile(1,10)
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "numberJoinerFor" which does the same thing as "numberJoinerWhile",
 // except using a "for" loop internally.
 
+function numberJoinerWhile (numStart, numEnd) {
+    var i = numStart
+    var joinedNumbers = ['']
+    for (i=0;i<=numEnd; i++) {
+        joinedNumbers += i + '_'
+        //console.log(i)
+        //console.log(joinedNum)
+    }
+    
+    console.log(joinedNumbers)
+    joinedNumbers.pop()
+    return joinedNumbers
+    }
+    
+    numberJoinerWhile(1,10)
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -21,3 +53,21 @@
 // numberJoinerFancy(1, 10) --> '1_2_3_4_5_6_7_8_9_10'
 // numberJoinerFancy(1, 5, '~') --> 1~2~3~4~5
 // numberJoinerFancy(3, 6, '***BANANAS***') --> 1***BANANAS***2***BANANAS***3
+
+function numberJoinerWhile (numStart, numEnd, symbol) {
+    var i = numStart
+    var joinedNumbers = ['']
+    while (i<=numEnd) {
+        joinedNumbers += i + symbol
+        i++
+        
+        //console.log(i)
+        //console.log(joinedNum)
+    }
+    
+    console.log(joinedNumbers)
+    joinedNumbers.pop()
+    return joinedNumbers
+    }
+    
+    numberJoinerWhile(1,10, '~')
