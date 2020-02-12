@@ -7,7 +7,12 @@
 //
 // Example:
 // reverse("skoob") --> "books"
+function reverse (mystr) {
 
+    var reversed = mystr.reverse()
+    return reversed
+}
+reverse()
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -17,6 +22,10 @@
 //
 // Example:
 // findLongestWord('a book full of dogs') --> 'book'
+
+function findLogestWord () {
+    
+}
 
 
 
