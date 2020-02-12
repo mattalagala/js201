@@ -40,17 +40,18 @@ let work = ['I', 'hope', 'this', 'works', 'z']
 function removeAnyWordWithZ (arrayOfStrings, letter) {
 //let test = letter.toUpperCase()
   for (i=0;i<arrayOfStrings.length; i++) {
-    if((!arrayOfStrings[i].includes(letter))){
+    if ((!arrayOfStrings[i].includes(letter))){
+      if ((!arrayOfStrings[i].includes('Z'))){
         newArrayOfStrings.push(arrayOfStrings[i])
   
-  
+        }
       }
     }
   console.log(newArrayOfStrings)
   return newArrayOfStrings
 }
 
-removeAnyWordWithZ(work, 'z')
+removeAnyWordWithZ(work,'z')
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "removeWordsWithChar" that takes 2 arguments:
 // 1) an array of strings
