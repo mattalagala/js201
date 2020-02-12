@@ -1,14 +1,27 @@
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Complete the removeZAnimals function as described below:
 
-function removeZAnimals () {
+function removeZAnimals (letter) {
   // 1) declare an array with some strings
   const animals = ["alligator", "zebra", "crocodile", "giraffe"]
 
   // create an empty array (we will fill this with strings from the previous array)
-  let animalsWithoutZ = []
+  var animalsWithoutZ = []
+ 
 
-  // 2) loop through "animals"
+  // // 2) loop through "animals"
+
+  for (i=0;i<animals.length; i++) {
+   
+    if(!animals[i].includes(letter)) {
+        animalsWithoutZ.push(animals[i])
+    }   
+    
+  }
+  console.log(animalsWithoutZ)
+  return animalsWithoutZ
+      
+      } 
 
   // 3) add every item in "animals" to "animalsWithoutZ" unless the animal name
   //    contains the letter "z"
@@ -16,15 +29,28 @@ function removeZAnimals () {
 
   // 4) return "animalsWithoutZ"
 
-}
-
+removeZAnimals('z')
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "removeAnyWordWithZ" that takes 1 argument: an array of strings
 // It should return a new array that has all of the items in the passed-in array minus
 // any words that contain the letter 'z' or 'Z' (case-insensitive)
+newArrayOfStrings = []
+let work = ['I', 'hope', 'this', 'works', 'z']
 
+function removeAnyWordWithZ (arrayOfStrings, letter) {
+//let test = letter.toUpperCase()
+  for (i=0;i<arrayOfStrings.length; i++) {
+    if((!arrayOfStrings[i].includes(letter))){
+        newArrayOfStrings.push(arrayOfStrings[i])
+  
+  
+      }
+    }
+  console.log(newArrayOfStrings)
+  return newArrayOfStrings
+}
 
-
+removeAnyWordWithZ(work, 'z')
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "removeWordsWithChar" that takes 2 arguments:
 // 1) an array of strings
