@@ -37,11 +37,11 @@ removeZAnimals('z')
 newArrayOfStrings = []
 let work = ['I', 'hope', 'this', 'works', 'z']
 
-function removeAnyWordWithZ (arrayOfStrings, letter) {
+function removeAnyWordWithZ (arrayOfStrings, letter, letter2) {
 //let test = letter.toUpperCase()
   for (i=0;i<arrayOfStrings.length; i++) {
     if ((!arrayOfStrings[i].includes(letter))){
-      if ((!arrayOfStrings[i].includes('Z'))){
+      if ((!arrayOfStrings[i].includes(letter2))){
         newArrayOfStrings.push(arrayOfStrings[i])
   
         }
@@ -51,7 +51,11 @@ function removeAnyWordWithZ (arrayOfStrings, letter) {
   return newArrayOfStrings
 }
 
-removeAnyWordWithZ(work,'z')
+removeAnyWordWithZ(work,'z', 'Z')
+// removeAnyWordWithZ(work,'z', 'Z')
+// removeAnyWordWithZ(work,'z', 'Z')
+
+
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "removeWordsWithChar" that takes 2 arguments:
 // 1) an array of strings
@@ -62,3 +66,22 @@ removeAnyWordWithZ(work,'z')
 // Examples:
 // removeWordsWithChar(['aaa', 'bbb', 'ccc'], 'b') --> ['aaa', 'ccc']
 // removeWordsWithChar(['pizza', 'beer', 'cheese'], 'E') --> ['pizza']
+
+charWithoutSpecial = []
+let arrStr = ['hope', 'this', 'works']
+
+function removeWordsWithChar (arrStr, character) {
+//let test = letter.toUpperCase()
+for (i=0;i<arrStr.length; i++) {
+  if ((!arrStr[i].includes(character))){
+      charWithoutSpecial.push(arrStr[i])
+
+      }
+    }console.log(charWithoutSpecial)
+    return charWithoutSpecial
+  }
+
+
+
+removeWordsWithChar(arrStr,'i')
+
